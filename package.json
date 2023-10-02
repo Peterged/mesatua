@@ -17,5 +17,10 @@
   "devDependencies": {
     "@babel/core": "^7.20.0"
   },
-  "private": true
+  "private": true,
+  "expo-file-system": "^15.6.0",
+  "expo-font": "^11.6.0",
+  "@react-navigation/native": "^6.1.8",
+  "@react-navigation/native-stack": "^6.9.14",
+  "moment": "^2.29.4"
 }
