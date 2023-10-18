@@ -18,5 +18,15 @@ export default {
   },
   primary: '',
   secondary: '',
-  background: ''
+  background: '',
+  grey: '#EEE9F0',
+  medium: '#9F9AA1',
+  mediumDark: '#424242',
+
+  // Others
+  main: {
+    black: '#000',
+    white: '#FFF',
+    red: '#FF3B3B'
+  }
 };
