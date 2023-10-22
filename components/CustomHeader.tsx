@@ -1,4 +1,4 @@
-import React from 'react';
+const React = require('react');
 import { Ionicons } from '@expo/vector-icons';
 
 
@@ -11,23 +11,23 @@ import {
     TouchableOpacity
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Colors from '@/constants/Colors';
+import Colors from '../constants/Colors';
 
 const CustomHeader = () => {
     return (
         <SafeAreaView style={styles.safeArea}>
             <View style={styles.container}>
                 <TouchableOpacity>
-                    <Image style={styles.headerLogo}  source={require('@/assets/images/black-zow-logo.png')} />
+                    <Image style={styles.headerLogo} source={require('../assets/images/black-zow-logo.png')} />
                 </TouchableOpacity>
 
                 <TouchableOpacity>
                     <Ionicons name='notifications' size={25} color={Colors.main.black} />
                 </TouchableOpacity>
             </View>
-            <StatusBar />
+            <StatusBar  />
         </SafeAreaView>
-    )
+    );
 }
 
 const styles = StyleSheet.create({

@@ -1,8 +1,11 @@
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { Stack, useNavigation } from 'expo-router';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useColorScheme } from 'react-native';
-import React from 'react';
-import CustomHeader from '@/components/CustomHeader';
+const React = require('react');
+const CustomHeader = require('../components/CustomHeader');
+const Tab = createBottomTabNavigator();
 
 
 export const unstable_settings = {
@@ -18,11 +21,15 @@ export default function RootLayoutNav() {
 
     return (
         // <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <Stack>
-            <Stack.Screen name="index" options={{
-                header: () => <CustomHeader />
-            }} />
-        </Stack>
+        <NavigationContainer>
+            {/* <BottomTab /> */}
+            <Stack>
+                <Stack.Screen name="index" options={{
+                    header: () => <CustomHeader />
+                }} />
+            </Stack>
+        </NavigationContainer>
+
         // </ThemeProvider>
     );
 }

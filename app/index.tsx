@@ -1,5 +1,6 @@
-import Colors from '@/constants/Colors';
-import React from 'react';
+const Colors = require('../constants/Colors');
+const React = require('react');
+import { useState, useEffect } from 'react';
 import {
     Text,
     View,
@@ -9,6 +10,12 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 const Page = () => {
+    const [historyExists, setHistoryExists] = useState<string>('');
+
+    useEffect(() => {
+        
+    }, []);
+
     return (
         <SafeAreaView style={styles.container}>
             <Text>Development</Text>
@@ -23,7 +30,7 @@ const Page = () => {
 const styles = StyleSheet.create({
     container: {
         top: 50,
-        backgroundColor: Colors.main.white
+        backgroundColor: Colors.Colors.main.white
     }
 })
 
